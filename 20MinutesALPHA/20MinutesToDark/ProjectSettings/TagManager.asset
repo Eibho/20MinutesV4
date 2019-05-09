@@ -10,6 +10,7 @@ TagManager:
   - PlayerKey
   - DeathScreen
   - UI
+  - OpeningCamera
   layers:
   - Default
   - TransparentFX

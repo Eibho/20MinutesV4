@@ -6,34 +6,30 @@ public class CollectNote : MonoBehaviour
 {
 
     public GameObject collectedNote;
+    public GameObject cutSceneObject;
+    
 
-    //audio
-    public AudioSource audioSource;
-    public AudioClip note;
+
   
 
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = FindObjectOfType<AudioSource>();
-        //deactivate the collected note
+        cutSceneObject.SetActive(false);
         collectedNote.SetActive(false);
+
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
-            //play note
-            audioSource.PlayOneShot(note);
-            //activate collected note
+            
             collectedNote.SetActive(true);
+            cutSceneObject.SetActive(true);
             //destroy 
             Destroy(gameObject);
 

@@ -6,13 +6,15 @@ public class UIClickHelp : MonoBehaviour
 {
     public GameObject image;
     GameObject player;
+    
 
     bool isTrigger = false;
+
 
     
     void Start()
     {
-        
+       
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -22,10 +24,13 @@ public class UIClickHelp : MonoBehaviour
         if (isTrigger == true)
         {
             image.SetActive(true);
+         
         }
         else if (isTrigger == false)
         {
             image.SetActive(false);
+            
+            
         }
 
     }
